@@ -7,8 +7,8 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 
 class Main {
-
     public static void main (String[] args) throws Exception {
+
         List<Filho> filhos = new ArrayList<>();
         filhos.add(new Filho("Filho 1"));// filhos.get(0)
         filhos.add(new Filho("Filho 2"));// filhos.get(1)
@@ -31,6 +31,7 @@ class Main {
                    filhosBastardos.add(filho);
              }
         }
+
         familia.getFilhos().removeAll(filhosBastardos);
         System.out.println("===============Filhos e idade======================");
 
@@ -62,8 +63,6 @@ class Main {
         } finally {
             fw.close();
         }
-
-
     }
 }
 
@@ -75,15 +74,12 @@ class Familia {
         this.pai = pai;
         this.filhos = filhos;
     }
-
     public Pai getPai() {
         return this.pai;
     }
-
     public void setPai(Pai pai) {
         this.pai = pai;
     }
-
     public List<Filho> getFilhos() {
         return this.filhos;
     }
@@ -100,7 +96,7 @@ class Pessoa {
 
 class Filho extends Pessoa {
 
-    public Filho(String nome){
+    public Filho(String nome) { 
         this.nome = nome;
     }
 
@@ -118,7 +114,6 @@ class Pai extends Pessoa {
     public double getSalario() {
         return this.salario;
     }
-
     public String toString() {
         return this.nome + " - " + this.idade + " - " + this.salario;
     }

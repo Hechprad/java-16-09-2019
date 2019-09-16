@@ -1,9 +1,12 @@
 import java.io.File;
+import java.io.FileReader;
 import java.io.FileWriter;
+import java.io.BufferedReader;
 import java.util.ArrayList;
 import java.util.List;
 
 class Main {
+import java.util.Scanner;
     public static void main (String[] args) throws Exception {
         
         List<Carro> carros = new ArrayList<>();
@@ -47,6 +50,34 @@ class Main {
             fw.close();
         }
 
+        FileReader fr = new FileReader("carros.txt");
+        try {
+            BufferedReader lerFr = new BufferedReader(fr);
+            String linha = lerFr.readLine();
+            System.out.println("======================Lendo Arquivo========================");
+            while (linha != null) {
+                System.out.printf(linha + "\n");
+                linha = lerFr.readLine();
+            }
+        } catch(Exception e) {
+            e.printStackTrace();
+        } finally {
+            fr.close();
+            System.out.println("Passou no finally");
+        }
+
+        // Scanner sc = null;
+        // try{
+        //     sc = new Scanner(new File("carros.txt"));
+        //     while(sc.hasNextLine()){
+        //         System.out.println(sc.nextLine());
+        //     }
+        // } catch(Exception e) {
+        //     e.printStackTrace();
+        // } finally{
+        //     sc.close();
+        // }
+        
     }
 }
 
