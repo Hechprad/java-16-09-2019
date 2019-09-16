@@ -1,0 +1,5 @@
+Nome: Loja Sciensa - CNPJ: 999.999.999-99 - Logradouro: Rua Augusta 2840 - Número: 989898 - Telefone: (11)1234-5678
+--------------------------------------------------------------------------
+Marca: Honda - Modelo: cit - Ano: 2019 - Cor: preto
+Marca: Toyota - Modelo: Corola - Ano: 2019 - Cor: cinza
+Marca: Honda - Modelo: cit - Ano: 2019 - Cor: prata
