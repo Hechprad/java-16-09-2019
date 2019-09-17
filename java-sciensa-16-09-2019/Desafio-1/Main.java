@@ -4,9 +4,9 @@ import java.io.FileWriter;
 import java.io.BufferedReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 class Main {
-import java.util.Scanner;
     public static void main (String[] args) throws Exception {
         
         List<Carro> carros = new ArrayList<>();
@@ -66,17 +66,17 @@ import java.util.Scanner;
             System.out.println("Passou no finally");
         }
 
-        // Scanner sc = null;
-        // try{
-        //     sc = new Scanner(new File("carros.txt"));
-        //     while(sc.hasNextLine()){
-        //         System.out.println(sc.nextLine());
-        //     }
-        // } catch(Exception e) {
-        //     e.printStackTrace();
-        // } finally{
-        //     sc.close();
-        // }
+        Scanner sc = null;
+        try{
+            sc = new Scanner(new File("carros.txt"));
+            while(sc.hasNextLine()){
+                System.out.println(sc.nextLine());
+            }
+        } catch(Exception e) {
+            e.printStackTrace();
+        } finally{
+            sc.close();
+        }
         
     }
 }
