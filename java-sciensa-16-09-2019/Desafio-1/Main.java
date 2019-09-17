@@ -89,13 +89,6 @@ class LojaDeCarros {
     private String telefone;
     private List<Carro> carros;
 
-    public List<Carro> getCarros(){
-        return this.carros;
-    }
-    public void setCarros(List<Carro> carros){
-        this.carros = carros;
-    }
-
     public LojaDeCarros(
         String nome, 
         String CNPJ, 
@@ -111,6 +104,12 @@ class LojaDeCarros {
     this.telefone = telefone;
     this.carros = carros;
 
+    }
+    public List<Carro> getCarros(){
+        return this.carros;
+    }
+    public void setCarros(List<Carro> carros){
+        this.carros = carros;
     }
 
     public String toString() {
